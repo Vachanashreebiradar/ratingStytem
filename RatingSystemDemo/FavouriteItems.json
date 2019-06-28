@@ -1,0 +1,80 @@
+{
+"favouriteItems" : [
+{
+"title": "Drag Me To Hell",
+"image": "DragMeToHell",
+"ratings": 4
+},
+{
+"title": "Captain Marvel",
+"image": "CaptainMarvel",
+"ratings": 3
+},
+{
+"title": "Vivah",
+"image": "Vivah",
+"ratings": 4
+},
+{
+"title": "Avengers",
+"image": "Avengers",
+"ratings": 3.5
+},
+{
+"title": "The Little Thing Called Love",
+"image": "LittleThingLove",
+"ratings": 2
+},
+{
+"title": "The Conjuring 2",
+"image": "Conjuring2",
+"ratings": 5
+},
+{
+"title": "100 Days with Mr. Arrogant",
+"image": "MrArrogant",
+"ratings": 1
+},
+{
+"title": "Jamoon",
+"image": "Jamoon",
+"ratings": 4
+},
+{
+"title": "Ice Cream",
+"image": "Icecream",
+"ratings": 5
+},
+{
+"title": "Bread Jam",
+"image": "Breadjam",
+"ratings": 3
+},
+{
+"title": "Pizza",
+"image": "Pizza",
+"ratings": 4
+},
+{
+"title": "Burger",
+"image": "Burger",
+"ratings": 3.5
+},
+{
+"title": "Days Without End",
+"image": "DaysWithoutEnd",
+"ratings": 3
+},
+{
+"title": "This Is Not Your Story",
+"image": "NotYourStory",
+"ratings": 5
+},
+{
+"title": "Friend Request",
+"image": "FriendRequest",
+"ratings": 4
+}
+]
+}
+

@@ -26,21 +26,6 @@ class JsonDataManager {
             }
     
     }
-    func writeDataFromJsonFile(data: Data?, completion: (Error?) -> ()) {
-        
-        guard let path = Bundle.main.path(forResource: "FavouriteItems", ofType: "json") else { return }
-        let url = URL(fileURLWithPath: path)
-        do {
-            guard let dataValue = data else { return }
-           try dataValue.write(to: url)
-            completion(nil)
-        } catch {
-            // handle error
-            print(error)
-            completion(error)
-        }
-        
-    }
-
+  
 }
 

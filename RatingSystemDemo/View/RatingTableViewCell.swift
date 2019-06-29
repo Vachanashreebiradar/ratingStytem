@@ -22,9 +22,6 @@ class RatingTableViewCell: UITableViewCell {
         view.settings.fillMode = .precise
         view.settings.starSize = 30
         view.settings.starMargin = 3
-//        view.text = "Rate Me"
-//        view.settings.textColor = UIColor.red
-//        view.settings.textMargin = 10
         view.center = CGPoint(x: self.itemRatingView.frame.size.width  / 2,
                                      y: self.itemRatingView.frame.size.height / 2)
 
@@ -46,9 +43,5 @@ class RatingTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-//    func cellData(item: [String:String]) {
-//        itemTitle.text = item["title"]
-//        itemImageView.image = UIImage(named: item["image"]!)
-//        
-//    }
+
 }

@@ -30,6 +30,7 @@ class RatingTableViewCell: UITableViewCell {
 
         return view
     }()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

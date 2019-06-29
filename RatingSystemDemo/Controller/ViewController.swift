@@ -11,8 +11,8 @@ typealias JSON = [String : Any]
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     @IBOutlet weak var itemsTableView: UITableView!
     var isRandomSelected = false
-    var timer : Timer? = nil
-    var timeInterval : TimeInterval = 5
+//    var timer : Timer? = nil
+//    var timeInterval : TimeInterval = 5
     var allItems = [FavouriteItems]()
     var favouriteItems = [JSON]()
     func getDataFromJsonfile() {
@@ -40,34 +40,37 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
     }
   @objc func generateRandomRating() {
-        isRandomSelected.toggle()
-    if isRandomSelected {
-        navigationItem.rightBarButtonItem?.tintColor = UIColor.darkGray
-
-        timer = Timer(timeInterval: timeInterval, target: self, selector: #selector(runCode), userInfo: nil, repeats: false)
-        RunLoop.main.add(timer!, forMode: .common)
-    } else {
-        timer?.invalidate()
-        navigationItem.rightBarButtonItem?.tintColor = UIColor.red
-    }
+    isRandomSelected.toggle()
+    let randomGenerator = RandomGenerator(allItems: allItems, target: self, isRandomSelected: isRandomSelected)
+    randomGenerator.generateRandomRating()
+//        isRandomSelected.toggle()
+//    if isRandomSelected {
+//        navigationItem.rightBarButtonItem?.tintColor = UIColor.darkGray
+//
+//        timer = Timer(timeInterval: timeInterval, target: self, selector: #selector(runCode), userInfo: nil, repeats: false)
+//        RunLoop.main.add(timer!, forMode: .common)
+//    } else {
+//        timer?.invalidate()
+//        navigationItem.rightBarButtonItem?.tintColor = UIColor.red
+//    }
    
     
 
     }
-   @objc func runCode() {
-            timeInterval = TimeInterval(Int.random(in: 10...43200))
-            let randomIndex = Int.random(in: 0...(allItems.count-1))
-            let randomRate = Double.random(in: 0...5)
-            var indexPath = IndexPath(row: randomIndex, section: 0)
-            allItems[indexPath.row].ratings = randomRate
-            allItems = allItems.sorted(by: { $0.ratings! > $1.ratings! })
-            isRandomSelected ? itemsTableView.reloadData() : nil
-            timer?.invalidate()
-            timer = nil
-    timer = Timer(timeInterval: timeInterval, target: self, selector: #selector(runCode), userInfo: nil, repeats: false)
-    RunLoop.main.add(timer!, forMode: .common)
-
-    }
+//   @objc func runCode() {
+//            timeInterval = TimeInterval(Int.random(in: 10...43200))
+//            let randomIndex = Int.random(in: 0...(allItems.count-1))
+//            let randomRate = Double.random(in: 0...5)
+//            var indexPath = IndexPath(row: randomIndex, section: 0)
+//            allItems[indexPath.row].ratings = randomRate
+//            allItems = allItems.sorted(by: { $0.ratings! > $1.ratings! })
+//            isRandomSelected ? itemsTableView.reloadData() : nil
+//            timer?.invalidate()
+//            timer = nil
+//    timer = Timer(timeInterval: timeInterval, target: self, selector: #selector(runCode), userInfo: nil, repeats: false)
+//    RunLoop.main.add(timer!, forMode: .common)
+//
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
 //        let defaults = UserDefaults.standard
